@@ -981,7 +981,7 @@
     var filteredProducts = products.filter(function (product) {
         return product.unitPrice >= 30 && product.unitPrice <= 100;
     });
-    console.log(filteredProducts);
+    console.log(filteredProducts.length);
 
     //ismi a harfi ile BİTEN ürünleri console a yazdır
 
@@ -996,14 +996,18 @@
         console.log("id'si 10 olan ürünün adı:", idProducts.name);
     }
     //discontinued false olan kaç ürün var
-
-
+    var filteredProducts3 = products.filter(x => x.discontinued == false);
+    console.log(filteredProducts3.length);    
 
     // en pahalı ürünün adını console a yazdır
-
+    var sortedProducts = products.sort((a,b) => b.unitPrice - a.unitPrice);
+    console.log(sortedProducts[0].name);
     
 
     //en ucuz ürünün adını console a yazdır
+    var sortedProducts = products.sort((a,b) => a.unitPrice - b.unitPrice);
+    console.log(sortedProducts[0].name); 
+
 
 </script>
 
